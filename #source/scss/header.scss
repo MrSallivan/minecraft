@@ -1,0 +1,94 @@
+//====================================================================================================
+header{}
+//====================================================================================================
+.header {
+	@include flexbox();
+	font-size: 12px;
+	justify-content: space-between;
+	align-items: center;
+	// .header__column
+	&__column {}
+	// .header__logo
+	&__logo {}
+}
+.menu-header {
+	// .menu-header__icon
+	&__icon {}
+	// .menu-header__menu
+	&__menu {}
+	// .menu-header__list
+	&__list {
+		li {
+			margin: 0px 40px 0px 0px;
+			&:last-child{
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		@include flexbox();
+		font-size: 16px;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .menu-header__link
+	&__link {
+		display: block;
+		position: relative;
+		color: grey;
+		text-transform: uppercase;
+		&:after{
+			@include anim(0.8s,0s);
+			content:'';
+			position: absolute;
+			bottom: -3px;
+			left: 50%;
+			width: 0%;
+			height: 2px;
+			background-color: red;
+		}
+		&:hover{
+			&:after{
+				left: 0;
+				width: 100%;
+			}
+		}
+		&_dn {
+			color: pink;
+			&:hover {
+				border: none;
+				color: pink;
+			}
+		}
+	}
+}
+.btn_pg {
+	
+	// background: rgb(255,134,0);
+	// background: linear-gradient(90deg, rgba(255,134,0,0.8365546902354692) 0%, rgba(240,42,134,1) 100%, rgba(2,0,36,1) 100%);
+}
+.btn_gn {
+	// background: rgb(93,255,0);
+	// background: linear-gradient(90deg, rgba(93,255,0,0.8365546902354692) 0%, rgba(27,82,3,1) 100%, rgba(2,0,36,1) 100%); 
+}
+
+/*
+	.header-menu__icon{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/
