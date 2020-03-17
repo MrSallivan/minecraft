@@ -122,6 +122,67 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767.98px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 0px 15px 0px;
+  }
+}
+.menu-header__icon {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+}
+.menu-header__icon span {
+  transition: all 0.3s ease 0s;
+  top: 8px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.menu-header__icon span:first-child {
+  top: 0px;
+}
+.menu-header__icon span:last-child {
+  top: auto;
+  bottom: 0px;
+}
+.menu-header__icon.active span {
+  transform: scale(0);
+}
+.menu-header__icon.active span:first-child {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+.menu-header__icon.active span:last-child {
+  transform: rotate(45deg);
+  bottom: 8px;
+}
+@media (max-width: 767.98px) {
+  .menu-header__icon {
+    display: block;
+  }
+}
+.menu-header__menu {
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 767.98px) {
+  .menu-header__menu {
+    display: none;
+  }
+  .menu-header__menu.active {
+    display: block;
+  }
 }
 .menu-header__list {
   display: flex;
@@ -133,8 +194,39 @@ h1, h2, h3, h4, h5, h6 {
 .menu-header__list li {
   margin: 0px 40px 0px 0px;
 }
+@media (max-width: 1182px) {
+  .menu-header__list li {
+    margin: 0px 20px 0px 0px;
+  }
+}
+@media (max-width: 992.98px) {
+  .menu-header__list li {
+    margin: 0px 10px 0px 0px;
+  }
+}
 .menu-header__list li:last-child {
   margin: 0px 0px 0px 0px;
+}
+@media (max-width: 767.98px) {
+  .menu-header__list li {
+    margin: 15px 0px 15px 0px;
+  }
+}
+@media (max-width: 992.98px) {
+  .menu-header__list {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu-header__list {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu-header__list {
+    font-size: 20px;
+    font-weight: 900;
+  }
 }
 .menu-header__link {
   display: block;
@@ -152,40 +244,64 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   background-color: red;
 }
+.menu-header__link:hover {
+  color: black;
+}
 .menu-header__link:hover:after {
   left: 0;
   width: 100%;
 }
 .menu-header__link_dn {
+  background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: pink;
 }
 .menu-header__link_dn:hover {
   border: none;
   color: pink;
 }
+.dots {
+  display: flex;
+  font-size: 0;
+}
+.dots:hover .dots__dot {
+  box-shadow: 0px 0px 10px rgba(234, 0, 0, 0.3);
+}
+.dots__dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: grey;
+  margin: 5px;
+}
+@media (max-width: 992.98px) {
+  .dots__dot {
+    width: 10px;
+    height: 10px;
+  }
+}
 
-/*
-	.header-menu__icon{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
+.btn_pg {
+  padding: 15px 20px 15px 40px;
+  background: #ff8600 url("../img/icons/1.png") 3px no-repeat;
+}
+@media (max-width: 767.98px) {
+  .btn_pg {
+    width: 250px;
+  }
+}
+
+.btn_gn {
+  padding: 15px 20px 15px 40px;
+  background: #5dff00 url("../img/icons/1.png") 3px no-repeat;
+}
+@media (max-width: 767.98px) {
+  .btn_gn {
+    width: 250px;
+  }
+}
+
 .form-row {
   display: flex;
   font-size: 0;
@@ -199,10 +315,10 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   display: inline-block;
   position: relative;
-  padding: 15px 20px 15px 40px;
-  border-radius: 5px;
+  border-radius: 3px;
+  text-align: center;
   color: white;
-  background: #5dff00 url("../img/icons/1.png") left no-repeat;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 .btn:before {
   content: "";

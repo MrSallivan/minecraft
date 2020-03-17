@@ -10,10 +10,10 @@
 .btn{
 	display: inline-block;
 	position: relative;
-	padding: 15px 20px 15px 40px;
-	border-radius: 5px;
+	border-radius: 3px;
+	text-align: center;
 	color: white;
-	background:rgb(93,255,0) url('../img/icons/1.png') left no-repeat;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 	&:before{
 		content:'';
 		position: absolute;
