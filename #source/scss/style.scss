@@ -13,19 +13,32 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
+@font-face {
+  font-family: 'MuseoCyrl900';
+  src: url("../fonts/Museo Sans Cyrl 900.ttf");
+  src: url("../fonts/Museo Sans Cyrl 900.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url("../fonts/ProximaNovaBold.otf");
+  src: url("../fonts/ProximaNovaBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: bold; }
 
 //</Подключаем шрифты>=======================================================================================
 
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily:"";
+$fontfamily:"MuseoCyrl900";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth:320px;
-$mw:1170;
+$mw:1122;
 $md1:$mw+12;
 $md2:992.98;
 $md3:767.98;
@@ -61,6 +74,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	background: url(../img/bg2.png) 0 0/cover repeat;
 	&.loaded{}
 }
 //</ОБОЛОЧКА>===========================================================================================================
@@ -79,6 +93,157 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+//<NEWS>================================================================================================
+.news {
+	background-color: #ecedee;
+	// .news__body
+	&__body {}
+	// .news__row
+	&__row {
+		@include flexbox();
+	}
+	// .news__column
+	&__column {}
+}
+.news-item {
+	// .news-item__body
+	&__body {}
+	// .news-item__row
+	&__row {
+		@include flexbox();
+	}
+	// .news-item__column
+	&__column {
+		// .news-item__column_l
+		&_l {
+			flex-basis:430px;
+		}
+		// .news-item__column_r
+		&_r {
+			@include flexbox();
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	// .news-item__image
+	&__image {
+		padding: 215px 205px 215px 205px;
+		// width: 430px;
+		// height: 410px;
+	}
+	// .news-item__title
+	&__title {
+		color: #2e3338;
+		font-family: "Proxima Nova";
+		font-size: 65px;
+		font-weight: 700;
+		position: relative;
+		margin: 0px 0px 20px 0px;
+		&:before{
+			content:'';
+			position: absolute;
+			bottom: -13px;
+			left: 0;
+			z-index: 3;
+			width: 142px;
+			height: 3px;
+			background-color: #0f1219;
+			background-image: linear-gradient(to right, #96ad1b 0%, #698a1d 100%);
+		}
+	}
+	// .news-item__text
+	&__text {
+		color: #7a90a4;
+		font-family: "Proxima Nova";
+		font-size: 21px;
+		font-weight: 700;
+		margin: 18px 0px 0px 0px;
+	}
+	// .news-item__btn
+	&__btn {
+		margin: 22px 0px 0px 0px;
+		background: url(../img/icons/3.png) 18px 21px no-repeat,
+	      linear-gradient(to right, #ffa857 0%, #fe5a73 100%);
+	}
+	&__online{
+		margin: 19px 0px 0px 0px;
+	}
+}
+.online {
+	@include flexbox();
+	// .online__circl
+	&__circl {
+		width: 9px;
+		height: 9px;
+		background-color: #7ec40d;
+		border-radius: 50%;
+		margin: 0px 4px 0px 0px;
+	}
+	// .online__text
+	&__text {
+		color: #9da9b5;
+		font-family: "Proxima Nova";
+		font-size: 13px;
+		font-weight: 700;
+	}
+}
+
+.btn {
+	// .btn_pg
+	&_pg {}
+}
+.tutorial {
+	// .tutorial__how-game
+	&__how-game {
+		width: 256px;
+		height: 88px;
+		position: relative;
+		p {
+			color: #2e3338;
+			font-family: "MuseoCyrl900";
+			font-size: 13px;
+			font-weight: 400;
+			z-index: 8;
+			position: relative;
+			margin: 24px 34px 51px 87px;
+		&_1 {
+			position: absolute;
+			width: 256px;
+			height: 88px;
+			background-color: #ffffff;
+			border-radius: 3px;
+			box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
+			top: 0px;
+			left: 0px;
+			z-index: 7;
+			
+		}
+		&_2{
+			position: absolute;
+			width: 241px;
+			height: 84px;
+			background-color: #ffffff;
+			border-radius: 3px;
+			box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
+			top: 11px;
+			left: 8px;
+			z-index: 5;
+		}
+		&_3{
+			position: absolute;
+			width: 224px;
+			height: 79px;
+			background-color: #ffffff;
+			border-radius: 3px;
+			box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
+			top: 22px;
+			left: 17px;
+			z-index: 3;
+		}		
+	}
+	// .tutorial__moder
+	&__moder {}
+}
 
 //====================================================================================================
 

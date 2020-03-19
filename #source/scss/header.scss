@@ -1,6 +1,7 @@
 //====================================================================================================
 header{
-}
+	background: rgba(255, 255, 255, 0.25);
+	}
 //====================================================================================================
 .header {
 	@include flexbox();
@@ -9,6 +10,7 @@ header{
 	align-items: center;
 	width: 100%;
 	height: 100%;
+	padding: 22px 0px 22px 0px;
 	@media (max-width:$md3+px){
 		flex-direction: column;
 		padding: 15px 0px 15px 0px;
@@ -17,7 +19,22 @@ header{
 	&__column {
 	}
 	// .header__logo
-	&__logo {}
+	&__logo {
+		display: block;
+		width: 65px;
+		height: 65px;
+		position: relative;
+		margin: 0px 155px 0px 0px;
+		img {
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
 }
 .menu-header {
 	// .menu-header__icon
@@ -59,7 +76,9 @@ header{
 	// .menu-header__list
 	&__list {
 		li {
-			margin: 0px 40px 0px 0px;
+			margin: 0px 35px 0px 0px;
+			&:nth-child(4){margin: 0;}
+			&:nth-child(5){margin: 0;}
 			@media (max-width:$md1+px){
 				margin: 0px 20px 0px 0px;
 			}
@@ -96,32 +115,34 @@ header{
 		position: relative;
 		color: grey;
 		text-transform: uppercase;
+		font-family: "Proxima Nova";
+		font-size: 14px;
+		font-weight: 700;
 		&:after{
 			@include anim(0.8s,0s);
+			display: none;
 			content:'';
 			position: absolute;
 			bottom: -3px;
-			left: 50%;
-			width: 0%;
+			left: 0%;
+			width: 100%;
 			height: 2px;
-			background-color: red;
+			background-color: #0f1219;
+			background-image: linear-gradient(to right, #ffa658 0%, #fe5d72 100%);
 		}
 		&:hover{
-			color: black;
+			color: #2e3338;
 			&:after{
-				left: 0;
-				width: 100%;
+				display: block;
 			}
 		}
 		&_dn {
-			background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
-			color: pink;
-			&:hover {
-				border: none;
-				color: pink;
-			}
+		  	background: linear-gradient(to right, #ffa757 0%, #fe5b73 100%);
+		  	color: #2e3338;
+		   p {
+		   	background: white;
+			   mix-blend-mode: screen; /* Режим наложения */
+		   }
 		}
 	}
 	&__dots {}
@@ -129,35 +150,72 @@ header{
 
 .dots {
 	@include flexbox();
+	margin: 0px 60px 0px 30px;
 	&:hover &__dot {
-			box-shadow: 0px 0px 10px rgba(234, 0, 0, 0.3);
+			box-shadow: 0px 0px 10px #fe5f72;
 		}
 	&__dot {
-		width:15px;
-		height: 15px;
+		width:6px;
+		height: 6px;
 		border-radius: 50%;
-		background: grey;
-		margin: 5px;
-		@media (max-width:$md2+px){
-			width:10px;
-			height: 10px;
-		}
+		background-color: #9da9b5;
+		margin: 1px;
 	}
 }
 
 
 .btn_pg {
-	padding: 15px 20px 15px 40px;
-	background: rgb(255,134,0) url('../img/icons/1.png') 3px no-repeat;
-	@media (max-width:$md3+px){
-		width: 250px;
+	width: 190px;
+	height: 51px;
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 13px;
+	font-weight: 700;
+	padding: 18px 23px 21px 68px;
+	background: url(../img/icons/face.svg) 19px 13px no-repeat,
+	linear-gradient(to right, #ffa857 0%, #fe5a73 100%);
+	background-color: #0f1219;
+	&:after{
+		content:'';
+		width: 190px;
+		height: 4px;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		top: 14px;
+		left: 55px;
+		width: 1px;
+		height: 22px;
+		background-color: #ffffff;
+		opacity: 0.15;
 	}
 }
 .btn_gn {
-	padding: 15px 20px 15px 40px;
-	background: rgb(93,255,0)url('../img/icons/1.png') 3px no-repeat;
-	@media (max-width:$md3+px){
-		width: 250px;
+	width: 190px;
+	height: 51px;
+	padding: 18px 23px 21px 68px;
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 13px;
+	font-weight: 700;
+	background-color: #0f1219;
+	background: url(../img/icons/triangl.svg) 19px 13px no-repeat,
+	linear-gradient(to right, #96ad1b 0%, #4e6715 100%);
+	&:after{
+		content:'';
+		width: 190px;
+		height: 4px;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		top: 14px;
+		left: 55px;
+		width: 1px;
+		height: 22px;
+		background-color: #ffffff;
+		opacity: 0.15;
 	}
 }
 
