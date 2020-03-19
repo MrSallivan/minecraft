@@ -156,7 +156,7 @@ header {
   width: 65px;
   height: 65px;
   position: relative;
-  margin: 0px 155px 0px 0px;
+  margin: 0px 135px 0px 0px;
 }
 .header__logo img {
   width: 0;
@@ -383,7 +383,12 @@ header {
 .news__row {
   display: flex;
   font-size: 0;
+  justify-content: space-between;
 }
+.news__column {
+  min-width: 0;
+}
+
 .news-item__row {
   display: flex;
   font-size: 0;
@@ -428,15 +433,21 @@ header {
 }
 .news-item__btn {
   margin: 22px 0px 0px 0px;
-  background: url(../img/icons/3.png) 18px 21px no-repeat, linear-gradient(to right, #ffa857 0%, #fe5a73 100%);
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAHCAMAAAAh3K25AAAAAXNSR0IB2cksfwAAAD9QTFRFAAAA////////////////////////////////////////////////////////////////////////////////Q7v6agAAABV0Uk5TAGDP768QkN+PUP/QsPCAQMAwX3/ggzW8FgAAAGtJREFUeJxlTksWxDAIwubTCSam0/b+Z51ouxs3gMITQLaUC3zqvn+ClJzqgsY1W1yc+QpK9oAug21ZSTOyuHtIsQZy4qABk0QoGA98l1LmM72p64rUZDoz9fmlf7/obtHR34b3XZ+GfajgB5BhBI9nMggxAAAAAElFTkSuQmCC) 18px 21px no-repeat, linear-gradient(to right, #ffa857 0%, #fe5a73 100%);
 }
 .news-item__online {
   margin: 19px 0px 0px 0px;
 }
 
+.news-item__column_r a {
+  display: inline-block;
+  width: 190px;
+}
+
 .online {
   display: flex;
   font-size: 0;
+  align-items: center;
 }
 .online__circl {
   width: 9px;
@@ -449,6 +460,47 @@ header {
   color: #9da9b5;
   font-family: "Proxima Nova";
   font-size: 13px;
+  font-weight: 700;
+}
+
+.tutorial {
+  display: flex;
+  font-size: 0;
+  flex-direction: column;
+}
+.how-game {
+  width: 256px;
+  height: 88px;
+  border-radius: 3px;
+  background: #fff;
+}
+.how-game_1 {
+  margin: 75px 0px 35px 0px;
+}
+.how-game__wrapper {
+  display: flex;
+  font-size: 0;
+  align-items: center;
+}
+.how-game__column1 {
+  flex: 0 0 62px;
+  height: 63px;
+  margin: 12px 12px 12px 12px;
+}
+.how-game__column2 {
+  margin: 24px 22px 24px 0px;
+}
+.how-game__title {
+  color: #2e3338;
+  font-family: "MuseoCyrl900";
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0px 0px 6px 0px;
+}
+.how-game__text {
+  color: #7d859f;
+  font-family: "Proxima Nova";
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -1068,4 +1120,12 @@ ol.counter li:before {
 
 .baloon-close {
   top: 18px !important;
+}
+
+.slider {
+  min-width: 0;
+}
+
+.slick-track {
+  display: flex;
 }

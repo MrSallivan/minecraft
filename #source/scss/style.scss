@@ -101,9 +101,12 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	// .news__row
 	&__row {
 		@include flexbox();
+		justify-content: space-between;
 	}
 	// .news__column
-	&__column {}
+	&__column {
+		min-width: 0;
+	}
 }
 .news-item {
 	// .news-item__body
@@ -111,6 +114,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	// .news-item__row
 	&__row {
 		@include flexbox();
+
 	}
 	// .news-item__column
 	&__column {
@@ -158,19 +162,22 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 21px;
 		font-weight: 700;
 		margin: 18px 0px 0px 0px;
+
 	}
 	// .news-item__btn
 	&__btn {
 		margin: 22px 0px 0px 0px;
-		background: url(../img/icons/3.png) 18px 21px no-repeat,
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAHCAMAAAAh3K25AAAAAXNSR0IB2cksfwAAAD9QTFRFAAAA////////////////////////////////////////////////////////////////////////////////Q7v6agAAABV0Uk5TAGDP768QkN+PUP/QsPCAQMAwX3/ggzW8FgAAAGtJREFUeJxlTksWxDAIwubTCSam0/b+Z51ouxs3gMITQLaUC3zqvn+ClJzqgsY1W1yc+QpK9oAug21ZSTOyuHtIsQZy4qABk0QoGA98l1LmM72p64rUZDoz9fmlf7/obtHR34b3XZ+GfajgB5BhBI9nMggxAAAAAElFTkSuQmCC) 18px 21px no-repeat,
 	      linear-gradient(to right, #ffa857 0%, #fe5a73 100%);
 	}
 	&__online{
 		margin: 19px 0px 0px 0px;
 	}
 }
+.news-item__column_r a {display: inline-block; width: 190px;} 
 .online {
 	@include flexbox();
+	align-items: center;
 	// .online__circl
 	&__circl {
 		width: 9px;
@@ -188,87 +195,53 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 }
 
-
 .tutorial {
+	@include flexbox();
+	flex-direction: column;
 	// .tutorial__how-game
 	&__how-game {}
-	// .tutorial__moder
-	&__moder {}
 }
 .how-game {
+	width: 256px;
+	height: 88px;
+	border-radius: 3px;
+	background:#fff;
+	&_1 {margin: 75px 0px 35px 0px;}
 	// .how-game__wrapper
-	&__wrapper {}
+	&__wrapper {
+		@include flexbox();
+		align-items: center;
+	}
+	// .how-game__column1
+	&__column1 {
+		flex: 0 0 62px;
+		height: 63px;
+		margin: 12px 12px 12px 12px;
+	}
+	// .how-game__column2
+	&__column2 {
+		margin: 24px 22px 24px 0px;
+	}
 	// .how-game__title
-	&__title {}
+	&__title {
+		color: #2e3338;
+		font-family: "MuseoCyrl900";
+		font-size: 13px;
+		font-weight: 400;
+		margin: 0px 0px 6px 0px;
+	}
 	// .how-game__text
-	&__text {}
-	// .how-game__2
-	&__2 {}
-	// .how-game__3
-	&__3 {}
-}
-.btn {
+	&__text {
+		color: #7d859f;
+		font-family: "Proxima Nova";
+		font-size: 10px;
+		font-weight: 700;
+	}
 }
 
-// .tutorial {
-// 	// .tutorial__how-game
-// 	&__how-game {
-// 		width: 256px;
-// 		height: 88px;
-// 		border-radius: 3px;
-// 		padding: 0px 22px 0px 87px;
-// 		background: #fff url('../img/qw.png') 10px 7px no-repeat;
-// 	}
-// .how-game {
-// 	// .how-game__title
-// 	&__wrapper{
-// 		position: relative;
-// 		width: 100%;
-// 		height: 100%;
-// 		z-index: 10;
-// 	}
-// 	&__title {
-// 		color: #2e3338;
-// 		font-family: "MuseoCyrl900";
-// 		font-size: 13px;
-// 		font-weight: 400;
-// 		margin: 0px 0px 6px 0px;
-// 		padding: 24px 0px 0px 0px;
-// 	}
-// 	// .how-game__text
-// 	&__text {
-// 		color: #7d859f;
-// 		font-family: "Proxima Nova";
-// 		font-size: 10px;
-// 		font-weight: 700;
-// 	}
-// 	&__2{
-// 		position: absolute;
-// 		width: 241px;
-// 		height: 84px;
-// 		background-color: #ffffff;
-// 		border-radius: 3px;
-// 		box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
-// 		top: 11px;
-// 		left: 8px;
-// 		z-index: 2;
-// 	}
-// 	&__3{
-// 		position: absolute;
-// 		width: 224px;
-// 		height: 79px;
-// 		background-color: #ffffff;
-// 		border-radius: 3px;
-// 		box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
-// 		top: 22px;
-// 		left: 17px;
-// 		z-index: 3;
-// 	}		
-// }
 
-// 	// .tutorial__moder
-// 	&__moder {}
-// }
+
+
 
 //====================================================================================================
 
@@ -278,3 +251,10 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 @import "forms.scss";
 @import "ui.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+//SLIDER===================================================================================
+.slider {
+	min-width: 0;
+}
+.slick-track {
+	display: flex;
+}
