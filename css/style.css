@@ -452,53 +452,6 @@ header {
   font-weight: 700;
 }
 
-.tutorial__how-game {
-  width: 256px;
-  height: 88px;
-  position: relative;
-}
-.tutorial__how-game p {
-  color: #2e3338;
-  font-family: "MuseoCyrl900";
-  font-size: 13px;
-  font-weight: 400;
-  z-index: 8;
-  position: relative;
-  top: 20%;
-}
-.tutorial__how-game_1 {
-  position: absolute;
-  width: 256px;
-  height: 88px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
-  top: 0px;
-  left: 0px;
-  z-index: 7;
-}
-.tutorial__how-game_2 {
-  position: absolute;
-  width: 241px;
-  height: 84px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
-  top: 11px;
-  left: 8px;
-  z-index: 5;
-}
-.tutorial__how-game_3 {
-  position: absolute;
-  width: 224px;
-  height: 79px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 5px 65px rgba(0, 0, 0, 0.08);
-  top: 22px;
-  left: 17px;
-  z-index: 3;
-}
 .form-row {
   display: flex;
   font-size: 0;
