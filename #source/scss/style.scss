@@ -15,8 +15,8 @@
 //<Подключаем шрифты>=======================================================================================
 @font-face {
   font-family: 'MuseoCyrl900';
-  src: url("../fonts/Museo Sans Cyrl 900.ttf");
-  src: url("../fonts/Museo Sans Cyrl 900.ttf") format("truetype");
+  src: url("../fonts/MuseoSansCyrl900.ttf");
+  src: url("../fonts/MuseoSansCyrl900.ttf") format("truetype");
   font-weight: 900;
   font-style: bold; }
 
@@ -110,11 +110,12 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 }
 .news-item {
 	// .news-item__body
-	&__body {}
+	&__body {
+		min-width: 0;
+	}
 	// .news-item__row
 	&__row {
 		@include flexbox();
-
 	}
 	// .news-item__column
 	&__column {
@@ -252,9 +253,3 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 @import "ui.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 //SLIDER===================================================================================
-.slider {
-	min-width: 0;
-}
-.slick-track {
-	display: flex;
-}

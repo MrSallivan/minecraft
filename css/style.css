@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "MuseoCyrl900";
-  src: url("../fonts/Museo Sans Cyrl 900.ttf");
-  src: url("../fonts/Museo Sans Cyrl 900.ttf") format("truetype");
+  src: url("../fonts/MuseoSansCyrl900.ttf");
+  src: url("../fonts/MuseoSansCyrl900.ttf") format("truetype");
   font-weight: 900;
   font-style: bold;
 }
@@ -389,6 +389,9 @@ header {
   min-width: 0;
 }
 
+.news-item__body {
+  min-width: 0;
+}
 .news-item__row {
   display: flex;
   font-size: 0;
@@ -1120,12 +1123,4 @@ ol.counter li:before {
 
 .baloon-close {
   top: 18px !important;
-}
-
-.slider {
-  min-width: 0;
-}
-
-.slick-track {
-  display: flex;
 }
