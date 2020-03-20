@@ -110,6 +110,7 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 }
 .news-item {
 	// .news-item__body
+	flex: 0 0 75%;
 	&__body {
 		min-width: 0;
 	}
@@ -197,8 +198,10 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 }
 
 .tutorial {
+	flex: 0 0 25%;
 	@include flexbox();
 	flex-direction: column;
+	align-items: flex-end;
 	// .tutorial__how-game
 	&__how-game {}
 }

@@ -389,6 +389,9 @@ header {
   min-width: 0;
 }
 
+.news-item {
+  flex: 0 0 75%;
+}
 .news-item__body {
   min-width: 0;
 }
@@ -467,9 +470,11 @@ header {
 }
 
 .tutorial {
+  flex: 0 0 25%;
   display: flex;
   font-size: 0;
   flex-direction: column;
+  align-items: flex-end;
 }
 .how-game {
   width: 256px;
