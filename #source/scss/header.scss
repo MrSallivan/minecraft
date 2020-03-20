@@ -115,7 +115,7 @@ header{
 		position: relative;
 		color: grey;
 		text-transform: uppercase;
-		font-family: "Proxima Nova";
+		font-family: $fontfamily;
 		font-size: 14px;
 		font-weight: 700;
 		&:after{
@@ -168,7 +168,7 @@ header{
 	width: 190px;
 	height: 51px;
 	color: #ffffff;
-	font-family: "Proxima Nova";
+	font-family: $fontfamily;
 	font-size: 13px;
 	font-weight: 700;
 	padding: 18px 23px 21px 68px;
@@ -196,7 +196,7 @@ header{
 	height: 51px;
 	padding: 18px 23px 21px 68px;
 	color: #ffffff;
-	font-family: "Proxima Nova";
+	font-family: $fontfamily;
 	font-size: 13px;
 	font-weight: 700;
 	background-color: #0f1219;
