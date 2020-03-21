@@ -37,7 +37,7 @@ $fontfamily:"ProximaNova";
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
-$minwidth:320px;
+$minwidth:1366px;
 $mw:1122;
 $md1:$mw+12;
 $md2:992.98;
@@ -51,7 +51,17 @@ $md4:479.98;
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 aside,nav,footer,header,section{display: block;}
-html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;background-color: #ecedee;}
+html,body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: $minwidth;
+	position: relative;
+	width: 1366px;
+	margin: 0 auto;
+	color: #000;
+	background: url('../img/bg/bg1.png') 0 0/1366px 2000px no-repeat;
+}
 body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
 	&.lock{overflow: hidden;
 		@media (max-width:$md3+px){
@@ -73,31 +83,47 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
-.wrapper{width: 100%;min-height: 100%;overflow: hidden;
-	background: url(../img/bg2.png) 0 0/cover repeat;
+.wrapper{width: 1366px;
+	min-height: 100%;
+	overflow: hidden; 
+	margin: 0 auto;
+	background: url('../img/bg/trl.png') 0 30px no-repeat;
 	&.loaded{}
 }
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
-.container{max-width:$mw+px;margin: 0 auto;width: 100%;
-	@media (max-width:$md1+px){max-width: 970px;}
-	@media (max-width:$md2+px){max-width: 750px;}
-	@media (max-width:$md3+px){max-width: none;padding:0 10px;}
-}
+.container{width:$mw+px;margin: 0 auto;}
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 @import "header.scss";
 @import "footer.scss";
+@import "popup.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+.litepixel {
+	transform: rotate(angle);
+}
 //<NEWS>================================================================================================
 .news {
-	
+	position: relative;
 	// .news__body
-	&__body {}
+	&__litepixel {
+		position: absolute;
+		@include rotate(-90deg);
+		top: 200px;
+		left: 80px;
+		opacity: 0.85;
+		color: #bdcadf;
+		font-family: "Proxima Nova";
+		font-size: 13px;
+		font-weight: bold;
+	}
+	&__body {
+	
+	}
 	// .news__row
 	&__row {
 		@include flexbox();
@@ -111,6 +137,9 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 .news-item {
 	// .news-item__body
 	flex: 0 0 75%;
+	&:hover{
+		background:transparent url('../img/bg/bg4.png') left top/cover no-repeat;
+	}
 	&__body {
 		min-width: 0;
 	}
@@ -349,13 +378,11 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	}
 	// .item__image
 	&__image {
-		// width: 209px;
-		// height: 186px;
+		width: 209px;
+		height: 186px;
 		margin: 15px 0px 27px 34px;
-		padding: 93px 104.5px;
-		img {
-			display: block;
-		}
+		padding: 88px 108px;
+		
 	}
 	// .item__column2
 	&__column2 {
@@ -533,7 +560,8 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 		font-size: 10px;
 		font-weight: 700;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-		padding: 14px 20px 20px 53px;
+		padding: 15px 0px 20px 43px;
+		margin: 13px 0px 0px 0px;
 		background: url(../img/icons/c.png) 15px 13px no-repeat,
 		linear-gradient(to right, #e5d86d 0%, #989a18 100%);
 		background-color: #0f1219;

@@ -10,6 +10,18 @@
 	height: 100%;
 	overflow: auto;
 	z-index: 100;
+	
+	&__title{
+		color: #5c5e61;
+		font-family: "MuseoCyrl900";
+		font-size: 16px;
+		font-weight: 400;
+		width: 100%;
+		height: 58px;
+		padding: 23px 0px 0px 22px;
+		border-bottom: 1px solid #e3effa;
+			}
+
 	&.active{
 		.popup-content{@include scale(1);}
 	}
@@ -20,6 +32,10 @@
 .popup-table{height: 100%;table-layout: fixed;
 	>.cell{height: 100%;vertical-align: middle;padding: 30px 10px;}
 }
+.popup-form {
+	margin: 38px 0px 0px 126px;
+	width: 350px;
+}
 .popup-content {
 	@include scale(0);
 	@include anim(0.3s, 0s);
@@ -27,15 +43,17 @@
 	max-width: 1230px;
 	margin: 0px auto;
 	background-color: #fff;
+	width: 601px;
+	height: 404px;
 }
 .popup-close {
 	width: 15px;
 	height: 15px;
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: 23px;
+	right: 26px;
 	cursor: pointer;
-	background: url('../img/icons/close.png') 0 0 no-repeat;
+	background: url('../img/close.png') 0 0 no-repeat;
 }
 .popup-video{
 	.popup-close{width: 40px;height: 40px;background-color: #000;top: 0;right: 0;}
