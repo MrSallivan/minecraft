@@ -543,6 +543,7 @@ header {
   display: flex;
   font-size: 0;
   justify-content: space-between;
+  margin: 0px 0px 85px 0px;
 }
 .purple-items__item:first-child {
   margin: 0px 55px 0px 0px;
@@ -625,6 +626,15 @@ header {
   bottom: -5px;
   left: 0;
 }
+.item__title_bl:after {
+  background-color: #0f1219;
+  background-image: linear-gradient(to right, #00e7ff 0%, #017fb4 100%);
+}
+.item__title_yl:after {
+  content: "";
+  background-color: #0f1219;
+  background-image: linear-gradient(to right, #e5d86d 0%, #989a18 100%);
+}
 .item__text {
   color: #586c81;
   font-family: "ProximaNova";
@@ -637,6 +647,18 @@ header {
 .item__text_f {
   background: url(../img/dot.png) 0 3.5px no-repeat;
 }
+.item__text_bl {
+  background: url(../img/dot1.png) left no-repeat;
+}
+.item__text_blf {
+  background: url(../img/dot1.png) 0 3.5px no-repeat;
+}
+.item__text_yl {
+  background: url(../img/dot2.png) left no-repeat;
+}
+.item__text_ylf {
+  background: url(../img/dot2.png) 0 3.5px no-repeat;
+}
 
 .hot {
   width: 61px;
@@ -645,8 +667,8 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 32px;
   color: #ffffff;
   font-family: "MuseoCyrl900";
   font-size: 15px;
@@ -666,8 +688,8 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 32px;
   color: #ffffff;
   font-family: "MuseoCyrl900";
   font-size: 15px;
@@ -675,7 +697,7 @@ header {
   text-transform: uppercase;
   color: #fff;
   border-radius: 3px;
-  box-shadow: 0 10px 35px rgba(251, 152, 43, 0.45);
+  box-shadow: 0 10px 35px rgba(102, 177, 23, 0.45);
   background-color: #0f1219;
   background-image: linear-gradient(to right, #65b018 0%, #9cdc01 100%);
 }
@@ -692,7 +714,7 @@ header {
   font-size: 10px;
   font-weight: 700;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  padding: 14px 0px 20px 43px;
+  padding: 15px 0px 20px 43px;
   margin: 13px 0px 0px 0px;
   background: url(../img/icons/c.png) 10px 13px no-repeat, linear-gradient(to right, #f171f8 0%, #aa35cb 100%);
   background-color: #0f1219;
@@ -720,7 +742,8 @@ header {
   font-size: 10px;
   font-weight: 700;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  padding: 14px 20px 20px 53px;
+  padding: 15px 0px 20px 43px;
+  margin: 13px 0px 0px 0px;
   background: url(../img/icons/c.png) 15px 13px no-repeat, linear-gradient(to right, #02c2d6 0%, #02a7c8 40%, #017fb4 100%);
   background-color: #0f1219;
 }
