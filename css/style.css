@@ -187,6 +187,7 @@ header {
 }
 .menu-header__menu {
   transition: all 0.3s ease 0s;
+  position: relative;
 }
 .menu-header__list {
   display: flex;
@@ -243,6 +244,62 @@ header {
   mix-blend-mode: screen;
   /* Режим наложения */
 }
+.menu-header__hiden-menu {
+  position: absolute;
+  left: 180px;
+}
+
+.hiden-menu {
+  display: none;
+  width: 253px;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  z-index: 100;
+}
+.hiden-menu li {
+  position: relative;
+}
+.hiden-menu li:hover div {
+  display: block;
+}
+.hiden-menu li div {
+  display: none;
+  width: 94px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fb881b;
+  background-image: linear-gradient(to right, #5262d6 0%, #42a2f3 100%);
+}
+
+.menu-header__menu .dots:hover ~ ul.hiden-menu {
+  display: block;
+}
+
+.arrow {
+  width: 45px;
+  height: 70px;
+  position: absolute;
+  background: transparent url("../img/icons/arr.png") left top no-repeat;
+  top: -10px;
+  right: 0px;
+}
+
+.hiden-menu li a {
+  display: block;
+  color: #b1bbc6;
+  font-family: "ProximaNova";
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 17px 0px 18px 24px;
+  border-bottom: 1px solid #edf2f9;
+}
+.hiden-menu li a:hover {
+  color: #505459;
+}
+
 .dots {
   display: flex;
   font-size: 0;
@@ -311,6 +368,12 @@ header {
   height: 22px;
   background-color: #ffffff;
   opacity: 0.15;
+}
+.btn_gn_pp {
+  margin: 5px 31px 0px 0px;
+  box-shadow: 0 15px 45px rgba(105, 179, 23, 0.45);
+  background-color: #0f1219;
+  background: url(../../img/icons/face.png) 19px 13px no-repeat, linear-gradient(to right, #9bdb01 0%, #66b118 100%);
 }
 
 .footer {
@@ -894,11 +957,24 @@ header {
   padding: 0px 15px;
 }
 
+.form-input {
+  margin: 0px 0px 16px 0px;
+  color: #d7dfe7;
+}
 .form-input p {
   color: #d7dfe7;
   font-family: "ProximaNova";
   font-size: 12px;
   font-weight: bold;
+  margin: 0px 0px 8px 0px;
+}
+
+.form-button__link {
+  height: 14px;
+  color: #d7dfe7;
+  font-family: "ProximaNova";
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .btn {
@@ -1010,6 +1086,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: #d7dfe7;
 }
 
 .input {
@@ -1019,7 +1096,6 @@ input[type=text], input[type=email], input[type=tel], textarea {
   border: 1px solid #d7dfe7;
   display: block;
   padding: 22px 0px 22px 15px;
-  color: #d7dfe7;
   font-family: "Proxima Nova";
   font-size: 16px;
   font-weight: 700;

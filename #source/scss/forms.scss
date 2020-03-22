@@ -3,14 +3,25 @@
 .form-row{@include flexbox();margin: 0px -15px;}
 .form__column{padding: 0px 15px;}
 .form-input{
+	margin: 0px 0px 16px 0px;
+	color: #d7dfe7;
 	p {
 		color: #d7dfe7;
 		font-family: $fontfamily;
 		font-size: 12px;
 		font-weight: bold;
+		margin: 0px 0px 8px 0px;
 	}
 }
-.form-button{}
+.form-button{
+	&__link{
+		height: 14px;
+		color: #d7dfe7;
+		font-family: $fontfamily;
+		font-size: 16px;
+		font-weight: 700;
+			}
+}
 //</FORM>====================================================================================================
 
 //<BUTTONS>====================================================================================================
@@ -80,7 +91,7 @@
 //</SELECT>====================================================================================================
 
 //<INPUT>====================================================================================================
-input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;color: #d7dfe7;}
 .input{
 	border-radius: 0 !important;
 	width: 100%;
@@ -88,7 +99,6 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:n
 	border: 1px solid #d7dfe7;
 	display: block;
 	padding: 22px 0px 22px 15px;
-	color: #d7dfe7;
 	font-family: "Proxima Nova";
 	font-size: 16px;
 	font-weight: 700;
