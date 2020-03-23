@@ -250,7 +250,6 @@ header {
 }
 
 .hiden-menu {
-  display: none;
   width: 253px;
   box-shadow: 0 15px 65px rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
@@ -273,7 +272,11 @@ header {
   background-image: linear-gradient(to right, #5262d6 0%, #42a2f3 100%);
 }
 
-.menu-header__menu .dots:hover ~ ul.hiden-menu {
+.menuunvisible {
+  display: none;
+}
+
+.menuvisible {
   display: block;
 }
 
@@ -373,7 +376,7 @@ header {
   margin: 5px 31px 0px 0px;
   box-shadow: 0 15px 45px rgba(105, 179, 23, 0.45);
   background-color: #0f1219;
-  background: url(../../img/icons/face.png) 19px 13px no-repeat, linear-gradient(to right, #9bdb01 0%, #66b118 100%);
+  background: url(../img/icons/face.png) 19px 13px no-repeat, linear-gradient(to right, #9bdb01 0%, #66b118 100%);
 }
 
 .footer {
