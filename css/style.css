@@ -236,11 +236,11 @@ header {
   display: block;
 }
 .menu-header__link_dn {
-  background: linear-gradient(to right, #ffa757 0%, #fe5b73 100%);
+  background-image: linear-gradient(to right, #ffa757 0%, #fe5b73 100%);
   color: #2e3338;
 }
 .menu-header__link_dn p {
-  background: white;
+  background: #F8F8F8;
   mix-blend-mode: screen;
   /* Режим наложения */
 }
